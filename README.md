@@ -1,5 +1,18 @@
 # TinyPinyin
 
+## 此分支上的改动
+1. 使用目前 Android Studio 最新的项目格式，位于 src 目录上
+2. 包 org.ahocorasick:ahocorasick 更新 ```0.3.0``` => ```0.6.3```
+3. 将 Java 源码转换为 Kotlin
+4. 将一些私有字段加入 public get
+5. *CnCityDict* 不公开且仅能通过 ```Pinyin.Config.getCnCityDict``` 获取，可自定义 ```assetFileName```
+6. 将多个库合并在主库中  
+ *AndroidAssetDict*```(tinypinyin-android-asset-lexicons)```   
+ *CnCityDict*```(tinypinyin-lexicons-android-cncity)```，如不需要可使用 **proguard** 裁剪，且不包含 [cncity.txt](/tinypinyin-lexicons-android-cncity/src/main/assets/cncity.txt) 如需要则需将此文件放入 **assets** 文件夹中  
+7. 在 Nuget 上发布 Xamarin.Android 绑定库 XAB.TinyPinyin
+
+***
+
  [![Build Status](https://travis-ci.org/promeG/TinyPinyin.svg?branch=master)](https://travis-ci.org/promeG/TinyPinyin)
 
 适用于Java和Android的快速、低内存占用的汉字转拼音库。

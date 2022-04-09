@@ -3,7 +3,7 @@
 ## 此分支上的改动
 1. 使用目前 Android Studio 最新的项目格式，位于 src 目录上
 2. 包 org.ahocorasick:ahocorasick 更新 ```0.3.0``` => ```0.6.3```
-3. 将 Java 源码转换为 Kotlin
+3. ~~将 Java 源码转换为 Kotlin~~
 4. 将一些私有字段加入 public get
 5. *CnCityDict* 不公开且仅能通过 ```Pinyin.Config.getCnCityDict``` 获取，可自定义 ```assetFileName```
 6. 将多个库合并在主库中  

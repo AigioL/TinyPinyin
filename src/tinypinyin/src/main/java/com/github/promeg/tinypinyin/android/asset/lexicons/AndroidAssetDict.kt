@@ -40,10 +40,10 @@ abstract class AndroidAssetDict(context: Context) : PinyinMapDict() {
                     ), "utf-8"
                 )
             )
-            var line: String
+            var line: String?
             while (reader.readLine().also { line = it } != null) {
                 // process the line.
-                val keyAndValue = line.split("\\s+").toTypedArray()
+                val keyAndValue = line!!.split("\\s+").toTypedArray()
                 if (keyAndValue.size == 2) {
                     val pinyinStrs: Array<String?> = keyAndValue[0].split("'").toTypedArray()
                     mDict[keyAndValue[1]] = pinyinStrs
